@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+#card{
+  max-width: 18rem !important
+}
+#inputGroupSelect01{
+  width: 80% !important;
+}
+
