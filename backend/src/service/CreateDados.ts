@@ -12,10 +12,10 @@ export class CreateDados {
     async execute({estado,volumeDeChuva,grauDeChuva}: DadosRequest): Promise<Dados> {
         const repo = getRepository(Dados);
 
-        if (volumeDeChuva <= 0.2) {
+        if (volumeDeChuva <= 2) {
             grauDeChuva = "Sem Chuva";
         }
-        else if (volumeDeChuva > 0.2 && volumeDeChuva <= 5.0) {
+        else if (volumeDeChuva > 2 && volumeDeChuva <= 5.0) {
             grauDeChuva = "Chuva Fraca";
         }
         else if (volumeDeChuva >= 5.1 &&

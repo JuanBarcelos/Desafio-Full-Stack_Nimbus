@@ -21,7 +21,7 @@ export class DadosMeteriologicos1639959861930 implements MigrationInterface {
                         type:"decimal",
                     },
                     {
-                        name:"grauDeChuava",
+                        name:"grauDeChuva",
                         type:"varchar",
                     },
                     {
