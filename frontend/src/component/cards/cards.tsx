@@ -2,15 +2,6 @@ import React from "react";
 
 function Card() {
 
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/dados")
-      .then((res) => res.json())
-      .then((data) => setData(data.estado));
-  }, []);
-
-
   return (
     <>
       <div>
@@ -20,10 +11,10 @@ function Card() {
           </div>
           <select className="custom-select" id="inputGroupSelect01">
             <option selected>Escolher...</option>
-            <option value="1">{!data ? "Flamengo/RJ" : data}</option>
-            <option value="2">{!data ? "Flamengo/RJ" : data}</option>
-            <option value="3">{!data ? "Flamengo/RJ" : data}</option>
-            <option value="4">{!data ? "Flamengo/RJ" : data}</option>
+            <option value="1">Flamengo/RJ</option>
+            <option value="2">Rio de Janeiro/RJ</option>
+            <option value="3">São Paulo/SP</option>
+            <option value="4">Guarujá/SP</option>
           </select>
         </div>
 
