@@ -14,7 +14,7 @@ export class Dados{
     volumeDeChuva: number;
 
     @Column()
-    grauDeChuava: string;
+    grauDeChuva: string;
 
     @CreateDateColumn()
     created_at: Date;
