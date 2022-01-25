@@ -30,13 +30,14 @@ jobs:
       run: npm i
 
     - name: Build project
-      run: npm rum build --if-present
+      run: npm rum createDist
+      run: npm rum build
 
     - name: Stop pm2
       run: pm2 stop nodedeploy
       if: ${{failure()}}
 
     - name: Start pm2
-      run: pm2 start src/server.ts --name nodedeploy
+      run: pm2 start dist/server.js --name nodedeploy
 
   
