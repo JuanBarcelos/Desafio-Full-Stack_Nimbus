@@ -27,10 +27,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: Install dependencies
-      run: yarn install
+      run: npm install
       
     - name: Build project
-      run: yarn build
+      run: npm rum build
       
     - name: stop pm2
       run: pm2 stop nodedeploy
