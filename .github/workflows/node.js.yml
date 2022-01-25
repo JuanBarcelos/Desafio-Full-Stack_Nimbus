@@ -29,8 +29,10 @@ jobs:
     - name: Install dependencies
       run: npm i
 
-    - name: Build project
+    - name: Create folder dist
       run: npm rum createDist
+
+    - name: Build project
       run: npm rum build
 
     - name: Stop pm2
