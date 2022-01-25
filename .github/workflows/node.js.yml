@@ -25,9 +25,18 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
       run: npm i
+
+    - name: Build project
+      run: npm rum build
+
+    - name: Stop pm2
+      rum: pm2 stop nodedeploy
+      if: ${{failure()}}
       
-    - name: deploy
-      run: npm rum build --if-present
+    - name: Start pm2
+      rum: pm2 start src/server.ts --name nodedeploy
 
   
