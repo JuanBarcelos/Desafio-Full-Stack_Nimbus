@@ -18,7 +18,7 @@ export class Dados{
 
     @CreateDateColumn()
     created_at: Date;
-
+//criar id 
     constructor(){
         if(!this.id){
             this.id = uuid();
