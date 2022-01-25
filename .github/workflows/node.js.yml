@@ -26,6 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
       run: npm i
-      run: npm rum build  --if-present
+      
+    - name: deploy
+      run: npm rum build --if-present
 
   
