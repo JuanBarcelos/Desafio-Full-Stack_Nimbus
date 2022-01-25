@@ -30,7 +30,7 @@ jobs:
       run: npm i
 
     - name: Build project
-      run: npm rum build
+      run: npm rum build --if-present
 
     - name: Stop pm2
       run: pm2 stop nodedeploy
