@@ -33,10 +33,10 @@ jobs:
       run: npm rum build
 
     - name: Stop pm2
-      rum: pm2 stop nodedeploy
+      run: pm2 stop nodedeploy
       if: ${{failure()}}
-      
+
     - name: Start pm2
-      rum: pm2 start src/server.ts --name nodedeploy
+      run: pm2 start src/server.ts --name nodedeploy
 
   
