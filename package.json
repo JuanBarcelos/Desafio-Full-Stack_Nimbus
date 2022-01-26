@@ -6,6 +6,7 @@
   "scripts": {
     "restart": "(pm2 stop nodedeploy || true) && pm2 start --name=nodedeploy dist/server.js",
     "createDist": "babel src -d dist",
+    "Hello": "Echo Hello",
     "build": "tsc",
     "dev": "ts-node-dev --transpile-only src/server.ts",
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
