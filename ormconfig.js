@@ -7,10 +7,10 @@ const config = {
        './dist/entities/*.js',
     ],
     migrations:[
-     "./src/database/migrations/*.ts"
+     "./dist/database/migrations/*.ts"
     ],
     cli:{
-      migrationsDir: "./src/database/migrations"
+      migrationsDir: "./dist/database/migrations"
     },
     ssl: true,
     extra: {
