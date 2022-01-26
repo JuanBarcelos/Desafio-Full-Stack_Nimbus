@@ -4,7 +4,7 @@ const config = {
     synchronize: false,
     logging: false,
     entities: [
-       './src/entities/*.ts',
+       './dist/entities/*.js',
     ],
     migrations:[
      "./src/database/migrations/*.ts"

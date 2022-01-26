@@ -1,0 +1,12 @@
+{
+    "rest-client.environmentVariables": {
+        "$shared": {},
+        "development": {
+            "baseUrl": "http://localhost:3010"
+        },
+        "production": {
+            "baseUrl": "http://150.230.66.41:3010"
+        }
+    },
+    "rest-client.previewOption": "full"
+}
