@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "restart": "(pm2 stop nodedeploy || true) && pm2 start --name=nodedeploy dist/server.js",
+    "restart": "(pm2 stop develop || true) && pm2 start --name=develop dist/server.js",
     "createDist": "babel src -d dist",
     "build": "tsc",
     "dev": "ts-node-dev --transpile-only src/server.ts",
