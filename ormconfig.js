@@ -4,13 +4,13 @@ const config = {
     synchronize: false,
     logging: false,
     entities: [
-       './src/entities/*.ts',
+       './dist/entities/*.ts',
     ],
     migrations:[
-     "./src/database/migrations/*.ts"
+     "./dist/database/migrations/*.ts"
     ],
     cli:{
-      migrationsDir: "./src/database/migrations"
+      migrationsDir: "./dist/database/migrations"
     },
     ssl: true,
     extra: {
