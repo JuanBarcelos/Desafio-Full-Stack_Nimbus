@@ -1,1 +1,4 @@
-GET {{baseUrl}}/dados
+GET {{baseUrl}}/estados
+
+
+GET {{baseUrl}}/estados
