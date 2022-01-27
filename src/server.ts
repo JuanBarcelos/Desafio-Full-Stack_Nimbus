@@ -12,4 +12,4 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-app.listen(3010, () => console.log("Server is runing..."))
+app.listen(3000, () => console.log("Server is runing..."))
