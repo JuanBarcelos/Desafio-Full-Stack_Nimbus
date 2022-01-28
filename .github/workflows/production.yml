@@ -31,9 +31,8 @@ jobs:
 
     - name: Set env vars
       run: |
-        secrets = ${{ toJSON(secrets) }}
         with open('.env', 'w') as f:
-          f.write(f'PORT={secrets['PROD_PORT']}')
+          f.write('PORT=3010')
       shell: python
 
     - name: Create folder dist
