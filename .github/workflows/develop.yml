@@ -30,10 +30,10 @@ jobs:
       run: npm i
 
     - name: Create folder dist
-      run: npm rum createDist
+      run: npm run createDist
 
     - name: Build project
-      run: npm rum build
+      run: npm run build
 
     - name: Start pm2
       run: npm run restart
