@@ -34,7 +34,7 @@ jobs:
         secrets = ${{ toJSON(secrets) }}
         with open('.env', 'w') as f:
           f.write(f'PORT={secrets['STG_PORT']}')
-      shell: python3
+      shell: python
 
     - name: Create folder dist
       run: npm run createDist
