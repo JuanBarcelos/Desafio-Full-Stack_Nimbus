@@ -12,11 +12,11 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: develop
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -25,7 +25,24 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+
+    - name: Install dependencies
+      run: npm i
+
+    - name: Set env vars
+      run: |
+        secrets = ${{ toJSON(secrets) }}
+        with open('.env', 'w') as f:
+          f.write(f'PORT={secrets['STG_PORT']}')
+      shell: python3
+
+    - name: Create folder dist
+      run: npm run createDist
+
+    - name: Build project
+      run: npm run build
+
+    - name: Start pm2
+      run: npm run restart
+
+  
