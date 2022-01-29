@@ -1,6 +1,9 @@
 {
     "rest-client.environmentVariables": {
         "$shared": {},
+        "staging": {
+            "baseUrl": "http://150.230.66.41:3000"
+        },
         "development": {
             "baseUrl": "http://localhost:3010"
         },
